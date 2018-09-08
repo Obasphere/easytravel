@@ -1,7 +1,14 @@
 @extends('layouts.admin')
 
+
 @section('content')
 
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><h1>Dashboard</h1></li>
+    </ol>
+
+ <div class="container-fluid">
     <div class="animated fadeIn">
                 <div class="row">
                 <div class="col-sm-6 col-lg-3">
@@ -719,4 +726,5 @@
                 </div>
                 <!-- /.row-->
             </div>
+ </div>          
 @endsection
