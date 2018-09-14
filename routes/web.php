@@ -18,4 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('home');
-Route::resource('cities', 'citiesController');
+Route::resource('/admin/cities', 'Admin\CitiesController', ['as'=>'admin']);

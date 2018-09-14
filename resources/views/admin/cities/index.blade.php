@@ -3,14 +3,14 @@
 
     <!-- Breadcrumb-->
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><h1>Cities</h1></li>
+      <li class="breadcrumb-item"><h1>City</h1></li>
     </ol>
 
         <!-- content header-->
     <section class="content">
      <div class="container-fluid">
         <p>
-            <a href="#" class="btn btn-primary">Add New City</a>
+            <a href="{{ route('admin.cities.create') }}" class="btn btn-primary">Add New City</a>
         </p>
         <table class="table table-boardered table-striped">
             <tr>
@@ -30,6 +30,6 @@
         </table>
      </div>
     </section>
-     
+
 
 @endsection

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\City;
 
 class CitiesController extends Controller
@@ -13,13 +14,13 @@ class CitiesController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $arr['cities'] = Cities::all();
+        $arr['cities'] = City::all();
         return view('admin.cities.index', $arr);
     }
 
@@ -30,7 +31,7 @@ class CitiesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.cities.create');
     }
 
     /**
@@ -39,9 +40,12 @@ class CitiesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, City $city)
     {
-        //
+        $city->city = $request->city;
+        $city->state = $request->state;
+        $city->save();
+        return redirect ('admin/cities');
     }
 
     /**

@@ -45,18 +45,18 @@
                 <i class="nav-icon icon-cloud-download"></i> {{ Auth::user()->name }} </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/admin">
+              <a class="nav-link" href="{{ route('home') }}">
                 <i class="nav-icon icon-speedometer"></i> <strong>Dashboard</strong>
               </a>
             </li>
             <li class="nav-title">Journey Settings</li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon icon-drop"></i> Cities</a>
+              <a class="nav-link" href="{{ route('admin.cities.index') }}">
+                <i class="nav-icon icon-drop"></i> City</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="typography.html">
-                <i class="nav-icon icon-pencil"></i> Journey</a>
+                <i class="nav-icon icon-pencil"></i> Trip</a>
             </li>
             <li class="nav-title">Components</li>
             <li class="nav-item nav-dropdown">
