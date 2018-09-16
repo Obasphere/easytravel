@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Easytravel;
 
 use Illuminate\Database\Eloquent\Model;
 

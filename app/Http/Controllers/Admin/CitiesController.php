@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Easytravel\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\City;
+use Easytravel\Http\Controllers\Controller;
+use Easytravel\City;
 
 class CitiesController extends Controller
 {
@@ -20,7 +20,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        $arr['cities'] = City::all();
+        $arr['cities'] = City::all()->paginate(3)->sortBy('state');
         return view('admin.cities.index', $arr);
     }
 
