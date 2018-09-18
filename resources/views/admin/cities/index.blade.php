@@ -24,7 +24,7 @@
                     <td>{{ $c->id }}</td>
                     <td>{{ $c->city }}</td>
                     <td>{{ $c->state }}</td>
-                    <td><a href="#" class="btn btn-info">Edit</a> <a href="#" class="btn btn-danger">Delete</a></td>
+                    <td><a href="{{ route('admin.cities.edit', $c->id) }}" class="btn btn-info">Edit</a> <a href="#" class="btn btn-danger">Delete</a></td>
                 </tr>
             @endforeach
         </table>

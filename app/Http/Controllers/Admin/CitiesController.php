@@ -20,7 +20,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        $arr['cities'] = City::all()->paginate(3)->sortBy('state');
+        $arr['cities'] = City::all()->sortBy('state');
         return view('admin.cities.index', $arr);
     }
 
@@ -45,7 +45,7 @@ class CitiesController extends Controller
         $city->city = $request->city;
         $city->state = $request->state;
         $city->save();
-        return redirect ('admin/cities');
+        return redirect()->route('admin.cities.index');
     }
 
     /**
@@ -65,9 +65,10 @@ class CitiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(City $city)
     {
-        //
+        $arr['city'] = $city;
+        return view('admin.cities.edit')->with($arr);
     }
 
     /**
@@ -77,9 +78,12 @@ class CitiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, City $city)
     {
-        //
+        $city->city = $request->city;
+        $city->state = $request->state;
+        $city->save();
+        return redirect()->route('admin.cities.index');
     }
 
     /**
