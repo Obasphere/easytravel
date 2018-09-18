@@ -20,7 +20,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        $arr['cities'] = City::all()->sortBy('state');
+        $arr['cities'] = City::all();
         return view('admin.cities.index', $arr);
     }
 
@@ -94,6 +94,7 @@ class CitiesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        City::destroy($id);
+        return redirect()->route('admin.cities.index');
     }
 }

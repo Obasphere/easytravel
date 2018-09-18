@@ -24,7 +24,14 @@
                     <td>{{ $c->id }}</td>
                     <td>{{ $c->city }}</td>
                     <td>{{ $c->state }}</td>
-                    <td><a href="{{ route('admin.cities.edit', $c->id) }}" class="btn btn-info">Edit</a> <a href="#" class="btn btn-danger">Delete</a></td>
+                    <td>
+                        <a href="{{ route('admin.cities.edit', $c->id) }}" class="btn btn-info">Edit</a>
+                        <a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn btn-danger">Delete</a>
+                        <form action="{{ route('admin.cities.destroy', $c->id) }}" method="post">
+                            @method('DELETE')
+                            @csrf
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </table>

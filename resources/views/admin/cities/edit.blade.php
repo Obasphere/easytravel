@@ -9,13 +9,14 @@
         <!-- content header-->
     <section class="content">
      <div class="container-fluid">
-       <form method="post" action="{{ route('admin.cities.update', $city->id) }}">
-            @csrf
+       <form method="post" action="{{ route('admin.cities.update',$city->id) }}">
+            @method('PUT')
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-3">
-                        <input type="text" name="city" class="form-control" placeholder="City" value={{ $city->city }}>
-                        <input type="text" name="state" class="form-control" placeholder="State" value={{ $city->state }}>
+                        <input type="text" name="city" class="form-control" placeholder="City" value="{{ $city->city }}">
+                        <input type="text" name="state" class="form-control" placeholder="State" value="{{ $city->state }}">
                     </div>
                     <div class="clearfix"></div>
                 </div>
