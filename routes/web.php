@@ -19,3 +19,5 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::resource('/admin/cities', 'Admin\CitiesController', ['as'=>'admin']);
+
+Route::resource('/admin/trips', 'Admin\TripsController', ['as'=>'admin']);

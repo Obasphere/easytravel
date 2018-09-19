@@ -18,10 +18,10 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Easytravel</title>
     <!-- Icons-->
-    <link href="{{ asset('node_modules/@coreui/icons/css/coreui-icons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/coreui-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/simple-line-icons.css') }}" rel="stylesheet">
     <!-- Main styles for this application-->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
@@ -44,19 +44,36 @@
               <a class="nav-link nav-link-success"  target="_top">
                 <i class="nav-icon icon-cloud-download"></i> {{ Auth::user()->name }} </a>
             </li>
+            <?php
+                $segment = Request::segment(2);
+            ?>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('home') }}">
+              <a href="{{ route('home') }}" class="nav-link
+                @if(!$segment)
+                active
+                @endif
+                ">
                 <i class="nav-icon icon-speedometer"></i> <strong>Dashboard</strong>
               </a>
             </li>
             <li class="nav-title">Journey Settings</li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('admin.cities.index') }}">
-                <i class="nav-icon icon-drop"></i> City</a>
+              <a href="{{ route('admin.cities.index') }}" class="nav-link
+                @if($segment=='cities')
+                active
+                @endif
+                ">
+                <i class="nav-icon icon-drop"></i> City
+               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="typography.html">
-                <i class="nav-icon icon-pencil"></i> Trip</a>
+              <a href="#" class="nav-link
+              @if($segment=='trip')
+              active
+              @endif
+              ">
+                <i class="nav-icon icon-pencil"></i> Trip
+              </a>
             </li>
             <li class="nav-title">Components</li>
             <li class="nav-item nav-dropdown">
