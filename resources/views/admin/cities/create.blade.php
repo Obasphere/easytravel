@@ -13,8 +13,8 @@
             @csrf
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-3">
-                        <input type="text" name="city" class="form-control" placeholder="City">
+                    <div class="col-md-6">
+                        <input type="text" name="city" class="form-control" placeholder="City"><br>
                         <input type="text" name="state" class="form-control" placeholder="State">
                     </div>
                     <div class="clearfix"></div>

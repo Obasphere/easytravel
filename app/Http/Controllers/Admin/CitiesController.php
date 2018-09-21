@@ -20,8 +20,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        $arr['cities'] = City::all();
-        return view('admin.cities.index', $arr);
+        return view('admin.cities.index')->with('cities', City::all()->sortBy('state'));
     }
 
     /**

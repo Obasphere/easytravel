@@ -67,8 +67,8 @@
                </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link
-              @if($segment=='trip')
+              <a href="{{ route('admin.trips.index') }}" class="nav-link
+              @if($segment=='trips')
               active
               @endif
               ">
@@ -395,15 +395,15 @@
       </div>
     </footer>
     <!-- CoreUI and necessary plugins-->
-    <script src="{{ asset(' node_modules/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset(' node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ asset(' node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset(' node_modules/pace-progress/pace.min.js') }}"></script>
     <script src="{{ asset(' node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset(' node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
     <!-- Plugins and scripts required by this view-->
-    <script src="{{ asset(' node_modules/chart.js/dist/Chart.min.js') }}"></script>
+    <script src="{{ asset('js/Chart.min.js') }}"></script>
     <script src="{{ asset(' node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
-    <script src="{{ asset(' js/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
   </body>
 </html>

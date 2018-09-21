@@ -14,16 +14,14 @@
         </p>
         <table class="table table-boardered table-striped">
             <tr>
-                <th>ID</th>
-                <th>City</th>
                 <th>State</th>
+                <th>City</th>
                 <th>Action</th>
             </tr>
             @foreach($cities as $c)
                 <tr>
-                    <td>{{ $c->id }}</td>
-                    <td>{{ $c->city }}</td>
                     <td>{{ $c->state }}</td>
+                    <td>{{ $c->city }}</td>
                     <td>
                         <a href="{{ route('admin.cities.edit', $c->id) }}" class="btn btn-info">Edit</a>
                         <a href="javascript:void(0)" onclick="$(this).parent().find('form').submit()" class="btn btn-danger">Delete</a>
