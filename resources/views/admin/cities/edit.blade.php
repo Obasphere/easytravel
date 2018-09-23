@@ -9,7 +9,7 @@
         <!-- content header-->
     <section class="content">
      <div class="container-fluid">
-       <form method="post" action="{{ route('admin.cities.update',$city->id) }}">
+       <form method="post" action="{{ route('admin.cities.update', $city->id) }}">
             @method('PUT')
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">

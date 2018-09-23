@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
-Route::resource('/admin/cities', 'Admin\CitiesController', ['as'=>'admin']);
-
-Route::resource('/admin/trips', 'Admin\TripsController', ['as'=>'admin']);
+Route::middleware('auth')->namespace('Admin')->prefix('admin')->as('admin.')->group(function(){
+    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::resource('/cities', 'CitiesController');
+    Route::resource('/trips', 'TripsController');
+});

@@ -9,11 +9,6 @@ use Easytravel\Trip;
 
 class TripsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -68,9 +63,10 @@ class TripsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Trip $trip)
     {
-        //
+        $arr['trip'] = $trip;
+        return view('admin.trips.edit', $arr)->with('cities', City::all()->sortBy('state'));
     }
 
     /**
@@ -80,9 +76,15 @@ class TripsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Trip $trip)
     {
-        //
+        $trip->tickets = $request->tickets;
+        $trip->from = $request->from;
+        $trip->to = $request->to;
+        $trip->departure_time = $request->time;
+        $trip->departure_date = $request->date;
+        $trip->save();
+        return redirect()->route('admin.trips.index');
     }
 
     /**
@@ -93,6 +95,7 @@ class TripsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Trip::destroy($id);
+        return redirect()->route('admin.trips.index');
     }
 }

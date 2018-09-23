@@ -726,5 +726,5 @@
                 </div>
                 <!-- /.row-->
             </div>
- </div>          
+ </div>
 @endsection

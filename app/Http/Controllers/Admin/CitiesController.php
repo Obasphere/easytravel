@@ -8,11 +8,6 @@ use Easytravel\City;
 
 class CitiesController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +15,7 @@ class CitiesController extends Controller
      */
     public function index()
     {
-        return view('admin.cities.index')->with('cities', City::all()->sortBy('state'));
+        return view('admin.cities.index')->with('cities', City::paginate(5));
     }
 
     /**

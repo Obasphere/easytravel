@@ -48,7 +48,7 @@
                 $segment = Request::segment(2);
             ?>
             <li class="nav-item">
-              <a href="{{ route('home') }}" class="nav-link
+              <a href="{{ route('admin.dashboard') }}" class="nav-link
                 @if(!$segment)
                 active
                 @endif
