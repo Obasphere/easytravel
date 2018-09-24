@@ -11,7 +11,7 @@
 |
 */
 
-Route::namespace('Client')->group(function(){
+Route::namespace('Client')->as('client.')->group(function(){
     Route::resource('/', 'TripsController');
 });
 
@@ -22,3 +22,6 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->as('admin.')->gr
     Route::resource('/cities', 'CitiesController');
     Route::resource('/trips', 'TripsController');
 });
+
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/services', 'PagesController@services')->name('services');

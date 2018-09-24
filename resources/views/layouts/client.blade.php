@@ -70,11 +70,9 @@
                     <h1><strong>Easytravel</strong></h1>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right menu-top">
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us </a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
+
+                @yield('navbar')
+
                 </div>
             </div>
         </nav>

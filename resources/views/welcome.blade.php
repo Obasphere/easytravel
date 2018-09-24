@@ -1,5 +1,13 @@
 @extends('layouts.client')
 
+@section('navbar')
+<ul class="nav navbar-nav navbar-right menu-top">
+    <li><a class="active" href="{{ ('/') }}">Home</a></li>
+    <li><a href="{{ ('/about') }}">About Us </a></li>
+    <li><a href="{{ ('/services') }}">Services</a></li>
+</ul>
+@endsection
+
 @section('booking')
 <div class="container-fluid">
     <form method="post" action="#">
