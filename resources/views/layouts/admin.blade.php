@@ -96,7 +96,9 @@
         <button class="sidebar-minimizer brand-minimizer" type="button"></button>
       </div>
       <main class="main">
+
           @yield('content')
+
       </main>
       <aside class="aside-menu">
         <ul class="nav nav-tabs" role="tablist">

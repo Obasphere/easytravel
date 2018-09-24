@@ -12,7 +12,7 @@
         <p>
             <a href="{{ route('admin.cities.create') }}" class="btn btn-primary">Add New City</a>
         </p>
-        <table class="table table-boardered table-striped">
+        <table class="table table-bordered table-striped">
             <tr>
                 <th>State</th>
                 <th>City</th>

@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('Client')->group(function(){
+    Route::resource('/', 'TripsController');
 });
 
 Auth::routes();

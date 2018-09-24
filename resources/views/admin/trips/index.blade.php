@@ -12,7 +12,7 @@
         <p>
             <a href="{{ route('admin.trips.create') }}" class="btn btn-primary">Add New Trip</a>
         </p>
-        <table class="table table-boardered table-striped">
+        <table class="table table-bordered table-striped">
             <tr>
                 <th>Tickets</th>
                 <th>From</th>
