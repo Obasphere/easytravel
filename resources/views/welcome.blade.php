@@ -10,35 +10,32 @@
 
 @section('booking')
 <div class="container-fluid">
-    <form method="post" action="#">
+    <span id="baseUrl" data-url="{{ URL('searchRoutes') }}"></span>
+    <form method="post" action="{{ ('/booking') }}">
         @csrf
         <legend><strong>Buy Ticket</strong></legend>
         <div class="form-group">
             <div class="row">
                 <div class="col-md-4">
-                    <label>Where are you leaving from?</label><br>
-                    <select name="from" class="form-control">
+                    <label><h5>Where are you leaving from?</h5></label><br>
+                    <select name="from" class="form-control" id="fromLocation">
                         <option value="0">Select your departure Terminal</option>
                         @foreach($trips as $t)
-                        <option value="{{ $t->id }}">{{ $t->from }}</option>
+                            <option value="{{ $t->from }}">{{ $t->from }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <label>Where are you going?</label><br>
-                    <select name="to" class="form-control">
-                        <option value="0">Select your destination</option>
-                        @foreach($trips as $t)
-                        <option value="{{ $t->to }}">{{ $t->to }}</option>
-                        @endforeach
+                    <label><h5>Where are you going?</h5></label><br>
+                    <select name="to" class="form-control" id="toLocation">
                     </select>
-                </div>
-                <div class="col-md-3">
-                    <label>When are you going?</label><br>
+                </div><br><br><br>
+                <div class="col-md-4">
+                    <label><h5>When are you going?</h5></label><br>
                     <input type="date" name="date" class="form-control" placeholder="Departure Date">
                 </div>
-                <div class="col-md-1">
-                    <label>Search</label><br>
+                <div class="col-md-4">
+                    <label><h5>Search</h5></label><br>
                     <input type="submit" class="btn btn-info" value="search">
                 </div>
             </div>

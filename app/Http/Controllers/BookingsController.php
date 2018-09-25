@@ -7,90 +7,33 @@ use Easytravel\Trip;
 
 class BookingsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function getTrips()
     {
-        $coming = request()->from;
-        $going = request()->to;
+        $getTrips = Trip::select('from')->distinct()->get();
+        return view('welcome')->with('trips', $getTrips);
+    }
 
-        $trips = Trip::where('from', 'LIKE', '%' . $coming. '%')
-                        ->where('to', 'LIKE', '%' . $going. '%')
-                        ->get();
-        if(count($trips) > 0){
-            return view('booking')->with('trips', $trips);
+    public function searchRoutes(Request $request)
+    {
+        try {
+            $getRoutes = Trip::where('from', $request->from)->select('to')->orderBy('to', 'desc')->get();
+
+            $data = [];
+
+            for($i = 0; $i < count($getRoutes); $i++)
+            {
+                array_push($data, $getRoutes[$i]->to);
+            }
+
+            return response()->json(['message' => 'Routes retrieved successfully', 'error' => false, 'data' => $data], 200);
+        } catch(\Exception $e) {
+            return response()->json(['message' => $e->getMessage(), 'error' => true, 'data' => []], 500);
         }
-        else{
-            return view('welcome')->withErrors('Details not found. Try another search !');
-        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function bookNow()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $getTrips = Trip::select('from')->distinct()->get();
+        return view('booking')->with('trips', $getTrips);
     }
 }

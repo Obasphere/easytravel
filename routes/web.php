@@ -11,7 +11,10 @@
 |
 */
 
-Route::resource('/', 'BookingsController');
+Route::get('/', 'BookingsController@getTrips');
+Route::get('/booking', 'BookingsController@bookNow');
+Route::get('searchRoutes', 'BookingsController@searchRoutes');
+
 
 Auth::routes();
 

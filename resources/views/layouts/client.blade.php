@@ -86,7 +86,7 @@
 
                         @yield('booking')
 
-                        <h2>@Easytravel...<br> Travel with ease</h2>
+                        <h2>@Easytravel...<br>Travel with ease</h2>
 
                     </div>
                 </div>
@@ -301,13 +301,18 @@
             </div>
         </div><!-- end container -->
     </div><!-- end copyrights -->
-
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+
+    <script src="js/routes.js"></script>
 
 </body>
 </html>
