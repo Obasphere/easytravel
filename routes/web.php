@@ -25,3 +25,5 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->as('admin.')->gr
 
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/services', 'PagesController@services')->name('services');
+
+Route::get('admin/secret/login', 'Auth\LoginController@showLoginForm');

@@ -75,10 +75,7 @@
                 <i class="nav-icon icon-pencil"></i> Trip
               </a>
             </li>
-            <li class="nav-title">Components</li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon icon-puzzle"></i> Base</a>
+            <li class="nav-title">Action</li>
             <li class="nav-item">
               <a class="nav-link nav-link-danger" target="_top" href="{{ route('logout') }}"
                 onclick="event.preventDefault();

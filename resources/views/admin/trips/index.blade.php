@@ -14,6 +14,7 @@
         </p>
         <table class="table table-bordered table-striped">
             <tr>
+                <th>No.</th>
                 <th>Tickets</th>
                 <th>From</th>
                 <th>To</th>
@@ -21,8 +22,10 @@
                 <th>Departure Date</th>
                 <th>Action</th>
             </tr>
+            <?php $no=1; ?>
             @foreach($trips as $t)
                 <tr>
+                    <td>{{ $no++ }}</td>
                     <td>{{ $t->tickets }}</td>
                     <td>{{ $t->from }}</td>
                     <td>{{ $t->to }}</td>
