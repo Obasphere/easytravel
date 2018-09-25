@@ -11,9 +11,7 @@
 |
 */
 
-Route::namespace('Client')->as('client.')->group(function(){
-    Route::resource('/', 'TripsController');
-});
+Route::resource('/', 'BookingsController');
 
 Auth::routes();
 

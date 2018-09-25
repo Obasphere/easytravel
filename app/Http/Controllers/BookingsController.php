@@ -1,12 +1,11 @@
 <?php
 
-namespace Easytravel\Http\Controllers\Client;
+namespace Easytravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Easytravel\Http\Controllers\Controller;
 use Easytravel\Trip;
 
-class TripsController extends Controller
+class BookingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,18 @@ class TripsController extends Controller
      */
     public function index()
     {
-        return view('welcome')->with('trips', Trip::all()->sortBy('state'));
+        $coming = request()->from;
+        $going = request()->to;
+
+        $trips = Trip::where('from', 'LIKE', '%' . $coming. '%')
+                        ->where('to', 'LIKE', '%' . $going. '%')
+                        ->get();
+        if(count($trips) > 0){
+            return view('booking')->with('trips', $trips);
+        }
+        else{
+            return view('welcome')->withErrors('Details not found. Try another search !');
+        }
     }
 
     /**
