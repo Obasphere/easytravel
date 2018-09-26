@@ -81,49 +81,16 @@
     </header>
 
 
-<div class="row booking-item-dates-change mb20 bg-white">
-                <h5 class="content-header"><i class="fa f fa-money rounded box-icon-border-dashed pull-left"></i> Payment Options</h5><hr>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h5 class="bolded text-color-secondary text-center">Terms and Conditions</h5>
-                    </div>
-                    <div class="col-md-12">
-                        <p>Tickets already purchased are non-refundable, and valid for 3 weeks.</p>
-                        <div class="checkbox checkbox-lg">
-                            <label>
-                                <div class="i-check"><input class="i-check" type="checkbox" data-val="true" data-val-required="The AcceptTerms field is required." id="AcceptTerms" name="AcceptTerms" value="true" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>I accept the <a target="_blank" href="/TermsOfUse">Terms and Conditions</a>
-                            </label>
-                        </div>
-                        <span class="field-validation-valid" data-valmsg-for="AcceptTerms" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-                <div class=" gap gap-bottom gap-border"></div>
-                    <div class="row">
-                                                        <div class="col-md-12">
-                                    <p class="text-center">Transaction must be completed within <b>10 Minutes</b> to avoid a timeout and possible loss of chosen seat number.</p>
-                                </div>
-                                    <div class="col-md-12 text-center">
-                                        <button type="submit" class="pay-with-rave-button" formaction="/ReserveSeat/FlutterwaveRave"></button>
-                                    </div>
-                    </div>
-            </div>
-njfbdfn
-fjmdsnm
-mfdmkmgng
-lfdm
-dmdlgedddsj
-cgfghf
-fhhgtrr
-dvbffg
-gggwfw
-gbbblm bhmlmrg
-omomomo
-gggg
-tuihg
-ggg
-ggh
-hkji
-gzgetc
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 
 
 

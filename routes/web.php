@@ -12,8 +12,8 @@
 */
 
 Route::get('/', 'BookingsController@getTrips');
-Route::get('/booking', 'BookingsController@bookNow');
 Route::get('searchRoutes', 'BookingsController@searchRoutes');
+Route::post('booking', 'BookingsController@bookNow');
 
 
 Auth::routes();

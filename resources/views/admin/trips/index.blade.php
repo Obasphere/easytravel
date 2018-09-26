@@ -15,9 +15,9 @@
         <table class="table table-bordered table-striped">
             <tr>
                 <th>No.</th>
-                <th>Tickets</th>
                 <th>From</th>
                 <th>To</th>
+                <th>Cost</th>
                 <th>Departure Time</th>
                 <th>Departure Date</th>
                 <th>Action</th>
@@ -26,9 +26,9 @@
             @foreach($trips as $t)
                 <tr>
                     <td>{{ $no++ }}</td>
-                    <td>{{ $t->tickets }}</td>
                     <td>{{ $t->from }}</td>
                     <td>{{ $t->to }}</td>
+                    <td>{{ $t->cost }}</td>
                     <td>{{ $t->departure_time }}</td>
                     <td>{{ $t->departure_date }}</td>
                     <td>

@@ -15,7 +15,6 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="number" name="tickets" class="form-control" placeholder="Tickets" value="{{ $trip->tickets }}"><br>
                         <select name="from" class="form-control">
                             <option value="{{ $trip->from }}">{{ $trip->from }}</option>
                             <option value="0">-- From --</option>
@@ -30,6 +29,7 @@
                             <option value="{{ $c->state }} ({{ $c->city }})">{{ $c->state }} ({{ $c->city }})</option>
                             @endforeach
                         </select><br>
+                        <input type="text" name="cost" class="form-control" placeholder="Cost" value="{{ $trip->cost }}"><br>
                         <input type="date" name="date" class="form-control" placeholder="Departure Date" value="{{ $trip->departure_date }}"><br>
                         <select name="time" class="form-control">
                             <option value="{{ $trip->departure_time }}">{{ $trip->departure_time }}</option>

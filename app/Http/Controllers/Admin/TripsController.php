@@ -16,7 +16,7 @@ class TripsController extends Controller
      */
     public function index()
     {
-        return view('admin.trips.index')->with('trips', Trip::all()->sortBy('departure_date'));
+        return view('admin.trips.index')->with('trips', Trip::all()->sortBy('from'));
     }
 
     /**
@@ -37,9 +37,9 @@ class TripsController extends Controller
      */
     public function store(Request $request, Trip $trip)
     {
-        $trip->tickets = $request->tickets;
         $trip->from = $request->from;
         $trip->to = $request->to;
+        $trip->cost = $request->cost;
         $trip->departure_time = $request->time;
         $trip->departure_date = $request->date;
         $trip->save();
@@ -78,9 +78,9 @@ class TripsController extends Controller
      */
     public function update(Request $request, Trip $trip)
     {
-        $trip->tickets = $request->tickets;
         $trip->from = $request->from;
         $trip->to = $request->to;
+        $trip->cost = $request->cost;
         $trip->departure_time = $request->time;
         $trip->departure_date = $request->date;
         $trip->save();
