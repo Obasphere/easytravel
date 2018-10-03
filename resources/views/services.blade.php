@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+
 <div class="row text-center">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="service-widget">

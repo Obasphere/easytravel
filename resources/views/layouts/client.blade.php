@@ -68,7 +68,8 @@
 
                         @yield('booking')
 
-                        <h2>@Easytravel...<br>Travel with ease</h2>
+                        <h2>@Easytravel</h2>
+                        <h3><b>travel with ease... Nigeria's leading transport company!</b></h3>
 
                     </div>
                 </div>
