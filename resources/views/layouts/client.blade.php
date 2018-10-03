@@ -39,24 +39,6 @@
 </head>
 <body class="seo_version">
 
-	<!-- LOADER -->
-	<div id="preloader">
-		<div id="cupcake" class="box">
-			<span class="letter">L</span>
-			<div class="cupcakeCircle box">
-				<div class="cupcakeInner box">
-					<div class="cupcakeCore box"></div>
-				</div>
-			</div>
-			<span class="letter box">A</span>
-			<span class="letter box">D</span>
-			<span class="letter box">I</span>
-			<span class="letter box">N</span>
-			<span class="letter box">G</span>
-		</div>
-	</div>
-	<!-- END LOADER -->
-
     <header class="header header_style_01">
         <nav class="megamenu navbar navbar-default">
             <div class="container">
