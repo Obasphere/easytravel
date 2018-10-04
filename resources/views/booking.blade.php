@@ -15,21 +15,21 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- Site CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <!-- Colors CSS -->
-    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="{{ asset('css/colors.css') }}">
     <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="css/versions.css">
+    <link rel="stylesheet" href="{{ asset('css/versions.css') }}">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,24 +38,6 @@
 
 </head>
 <body class="seo_version">
-
-	<!-- LOADER -->
-	<div id="preloader">
-		<div id="cupcake" class="box">
-			<span class="letter">L</span>
-			<div class="cupcakeCircle box">
-				<div class="cupcakeInner box">
-					<div class="cupcakeCore box"></div>
-				</div>
-			</div>
-			<span class="letter box">A</span>
-			<span class="letter box">D</span>
-			<span class="letter box">I</span>
-			<span class="letter box">N</span>
-			<span class="letter box">G</span>
-		</div>
-	</div>
-	<!-- END LOADER -->
 
     <header class="header header_style_01">
         <nav class="megamenu navbar navbar-default">
@@ -112,9 +94,9 @@
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
+    <script src="{{ asset('js/all.js') }}"></script>
     <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
 
 </body>
 </html>
